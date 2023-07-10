@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             Title="Ethereum"
+             x:Class="XampleBitcoin.Views.EthereumHome">
+    <ScrollView>
+        <Grid Margin="10,10,10,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <Frame  BackgroundColor="Green" HeightRequest="84" HasShadow="True" CornerRadius="4">
+                    <StackLayout HorizontalOptions="Center">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.6*"/>
+                                <RowDefinition Height="0.9*"/>
+                                <RowDefinition Height="0.2*"/>
+                            </Grid.RowDefinitions>
+                            <StackLayout Grid.Column="0" Grid.Row="0" Margin="0,-7,0,0">
+                                <yummy:PancakeView BackgroundColor="Transparent" HeightRequest="40" WidthRequest="35" CornerRadius="15" 
+                                                       HorizontalOptions="Center" VerticalOptions="Center" Padding="0,0,0,0" Grid.Column="0">
+                                    <Image Source="ethereum.webp" Aspect="AspectFill" HeightRequest="40" WidthRequest="35" HorizontalOptions="Center"
+                                                       VerticalOptions="Center" />
+                                </yummy:PancakeView>
+                            </StackLayout>
+                            <StackLayout Grid.Column="2" Grid.Row="0" Margin="0,-7,0,0">
+                                <Label Text="$32,544" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                            <StackLayout  Grid.Row="1" Grid.ColumnSpan="3" Margin="0,-4,0,0">
+                                <Label Text="0.034567 ETH" FontAttributes="Bold" HorizontalOptions="Center"
+                                           FontSize="29"/>
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="2">
+                                <Label Text="market cap" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="2">
+                                <Label Text="$23,345" FontAttributes="Bold" HorizontalOptions="Center"/>
+                            </StackLayout>
+                            <StackLayout Grid.Column="2" Grid.Row="2">
+                                <Label Text="-13%" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <StackLayout Grid.Row="1" HorizontalOptions="FillAndExpand" Margin="0,-3,0,0">
+                <Frame  BackgroundColor="Green" HeightRequest="10" HasShadow="True" CornerRadius="6">
+                    <StackLayout HorizontalOptions="Center" Margin="0,-4,0,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0">
+                                <Label Text="Send" FontAttributes="Bold" HorizontalOptions="Center" />
+                            </StackLayout>
+                            <StackLayout Grid.Column="1">
+                                <Label Text="Buy" FontAttributes="Bold" HorizontalOptions="Center"/>
+                            </StackLayout>
+                            <StackLayout Grid.Column="2">
+                                <Label Text="Receive" FontAttributes="Bold" HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <StackLayout Grid.Row="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0">
+                        <StackLayout Margin="5,0,5,0">
+                            <Label Text="Bitcoin Transactions" FontSize="14" FontAttributes="Bold"/>
+                            <Label Text="View the overall transaction(s) of your main bitcoin wallet."
+                                       FontSize="13" Margin="0,-7,0,0"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1">
+
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+            <StackLayout Grid.Row="3">
+                <Grid>
+                    <StackLayout Margin="5,0,5,0">
+                        <Frame HasShadow="True" BackgroundColor="LightGreen" CornerRadius="6">
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <StackLayout Grid.Row="0" Margin="0,-6,0,0">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <yummy:PancakeView BackgroundColor="Transparent" HeightRequest="30" WidthRequest="30" CornerRadius="15" 
+                                                       HorizontalOptions="StartAndExpand" VerticalOptions="Center" Padding="0,0,0,0" Grid.Column="0" Margin="0,-6,0,0">
+                                                <Image Source="falling.png" Aspect="AspectFill" HeightRequest="30" WidthRequest="30" HorizontalOptions="Center"
+                                                       VerticalOptions="Center" />
+                                            </yummy:PancakeView>
+                                            <StackLayout Orientation="Horizontal" Grid.Column="1">
+                                                <yummy:PancakeView BackgroundColor="Transparent" HeightRequest="30" WidthRequest="30" CornerRadius="15" 
+                                                       HorizontalOptions="Start" VerticalOptions="Center" Margin="0,-6,0,0">
+                                                    <Image Source="stopwatch.png" Aspect="AspectFill" HeightRequest="27" WidthRequest="30" HorizontalOptions="Center"
+                                                       VerticalOptions="Center" />
+                                                </yummy:PancakeView>
+                                                <StackLayout>
+                                                    <Label Text="2 days ago" FontSize="13" HorizontalOptions="End" FontAttributes="Bold"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <StackLayout Grid.Column="2" HorizontalOptions="EndAndExpand">
+                                                <Label Text="-0.0035728 ETH" FontSize="13" HorizontalOptions="EndAndExpand" FontAttributes="Bold"
+                                                           TextColor="Red"/>
+                                            </StackLayout>
+                                        </Grid>
+                                    </StackLayout>
+                                    <StackLayout Grid.Row="1" Margin="0,-6,0,0" Orientation="Horizontal">
+                                        <yummy:PancakeView BackgroundColor="Transparent" HeightRequest="20" WidthRequest="24" CornerRadius="15" 
+                                                       HorizontalOptions="EndAndExpand" VerticalOptions="Center" Padding="0,0,0,0" Grid.Column="0" Margin="0,-6,0,0">
+                                            <Image Source="placeholder.png" Aspect="AspectFill" HeightRequest="20" WidthRequest="24" HorizontalOptions="Center"
+                                                       VerticalOptions="Center" />
+                                        </yummy:PancakeView>
+                                        <Label Text="133tRwQIOo67CXzaLKjhpWIY742346BVM" FontSize="13" HorizontalOptions="End" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+            <StackLayout Grid.Row="4">
+                <Grid>
+                    <StackLayout Margin="5,0,5,0">
+                        <Frame HasShadow="True" BackgroundColor="LightGreen" CornerRadius="6">
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <StackLayout Grid.Row="0" Margin="0,-6,0,0">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <yummy:PancakeView BackgroundColor="Transparent" HeightRequest="30" WidthRequest="30" CornerRadius="15" 
+                                                       HorizontalOptions="StartAndExpand" VerticalOptions="Center" Padding="0,0,0,0" Grid.Column="0" Margin="0,-6,0,0">
+                                                <Image Source="falling.png" Aspect="AspectFill" HeightRequest="30" WidthRequest="30" HorizontalOptions="Center"
+                                                       VerticalOptions="Center" />
+                                            </yummy:PancakeView>
+                                            <StackLayout Orientation="Horizontal" Grid.Column="1">
+                                                <yummy:PancakeView BackgroundColor="Transparent" HeightRequest="30" WidthRequest="30" CornerRadius="15" 
+                                                       HorizontalOptions="Start" VerticalOptions="Center" Margin="0,-6,0,0">
+                                                    <Image Source="stopwatch.png" Aspect="AspectFill" HeightRequest="27" WidthRequest="30" HorizontalOptions="Center"
+                                                       VerticalOptions="Center" />
+                                                </yummy:PancakeView>
+                                                <StackLayout>
+                                                    <Label Text="2 days ago" FontSize="13" HorizontalOptions="End" FontAttributes="Bold"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <StackLayout Grid.Column="2" HorizontalOptions="EndAndExpand">
+                                                <Label Text="-0.0035728 ETH" FontSize="13" HorizontalOptions="EndAndExpand" FontAttributes="Bold"
+                                                           TextColor="Red"/>
+                                            </StackLayout>
+                                        </Grid>
+                                    </StackLayout>
+                                    <StackLayout Grid.Row="1" Margin="0,-6,0,0" Orientation="Horizontal">
+                                        <yummy:PancakeView BackgroundColor="Transparent" HeightRequest="20" WidthRequest="24" CornerRadius="15" 
+                                                       HorizontalOptions="EndAndExpand" VerticalOptions="Center" Padding="0,0,0,0" Grid.Column="0" Margin="0,-6,0,0">
+                                            <Image Source="placeholder.png" Aspect="AspectFill" HeightRequest="20" WidthRequest="24" HorizontalOptions="Center"
+                                                       VerticalOptions="Center" />
+                                        </yummy:PancakeView>
+                                        <Label Text="133tRwQIOo67CXzaLKjhpWIY742346BVM" FontSize="13" HorizontalOptions="End" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+            <StackLayout Grid.Row="5">
+                <Grid>
+                    <StackLayout Margin="5,0,5,0">
+                        <Frame HasShadow="True" BackgroundColor="LightGreen" CornerRadius="6">
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <StackLayout Grid.Row="0" Margin="0,-6,0,0">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <yummy:PancakeView BackgroundColor="Transparent" HeightRequest="30" WidthRequest="30" CornerRadius="15" 
+                                                       HorizontalOptions="StartAndExpand" VerticalOptions="Center" Padding="0,0,0,0" Grid.Column="0" Margin="0,-6,0,0">
+                                                <Image Source="growth.png" Aspect="AspectFill" HeightRequest="30" WidthRequest="30" HorizontalOptions="Center"
+                                                       VerticalOptions="Center" />
+                                            </yummy:PancakeView>
+                                            <StackLayout Orientation="Horizontal" Grid.Column="1">
+                                                <yummy:PancakeView BackgroundColor="Transparent" HeightRequest="30" WidthRequest="30" CornerRadius="15" 
+                                                       HorizontalOptions="Start" VerticalOptions="Center" Margin="0,-6,0,0">
+                                                    <Image Source="stopwatch.png" Aspect="AspectFill" HeightRequest="27" WidthRequest="30" HorizontalOptions="Center"
+                                                       VerticalOptions="Center" />
+                                                </yummy:PancakeView>
+                                                <StackLayout>
+                                                    <Label Text="5 days ago" FontSize="13" HorizontalOptions="End" FontAttributes="Bold"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <StackLayout Grid.Column="2" HorizontalOptions="EndAndExpand">
+                                                <Label Text="2.0539218 ETH" FontSize="13" HorizontalOptions="EndAndExpand" FontAttributes="Bold"
+                                                           TextColor="navy"/>
+                                            </StackLayout>
+                                        </Grid>
+                                    </StackLayout>
+                                    <StackLayout Grid.Row="1" Margin="0,-6,0,0" Orientation="Horizontal">
+                                        <yummy:PancakeView BackgroundColor="Transparent" HeightRequest="20" WidthRequest="24" CornerRadius="15" 
+                                                       HorizontalOptions="EndAndExpand" VerticalOptions="Center" Padding="0,0,0,0" Grid.Column="0" Margin="0,-6,0,0">
+                                            <Image Source="placeholder.png" Aspect="AspectFill" HeightRequest="20" WidthRequest="24" HorizontalOptions="Center"
+                                                       VerticalOptions="Center" />
+                                        </yummy:PancakeView>
+                                        <Label Text="133tRwQIOo67CXzaLKjhpWIY742346BVM" FontSize="13" HorizontalOptions="End" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

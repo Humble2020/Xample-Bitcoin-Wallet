@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Title="Transaction details"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XampleBitcoin.Views.BitcoinTransactionView">
+    <ContentPage.Content>
+        <StackLayout Margin="15,20,15,0" HorizontalOptions="CenterAndExpand">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0" Orientation="Horizontal" Margin="0,25,0,0">
+                    <Label Text="Address:" HorizontalOptions="Start" FontAttributes="Bold" FontSize="15"/>
+                    <Label Text="13RTE9YtVxAQLPunBCVywt2937V" HorizontalOptions="End" FontAttributes="Bold" FontSize="14" x:Name="Hash_address"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Text="Transaction Fee" HorizontalOptions="Start" FontAttributes="Bold" FontSize="15"/>
+                    <Label Text="0.000345 BTC" HorizontalOptions="End" FontAttributes="Bold" FontSize="14" x:Name="Hash_fee"/>
+                </StackLayout>
+                <StackLayout Grid.Row="2" Orientation="Horizontal">
+                    <Label Text="Amount Value:" HorizontalOptions="Start" FontAttributes="Bold" FontSize="15"/>
+                    <Label Text="23.964 BTC" HorizontalOptions="End" FontAttributes="Bold" FontSize="14" x:Name="H_value"/>
+                </StackLayout>
+                <StackLayout Grid.Row="3" Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Text="Size of Transaction:" HorizontalOptions="Start" FontAttributes="Bold" FontSize="15"/>
+                    <Label Text="195" HorizontalOptions="Start" FontAttributes="Bold" FontSize="14" x:Name="Hash_size"/>
+                    <Label Text="Locktime:" HorizontalOptions="EndAndExpand" FontAttributes="Bold" FontSize="15"/>
+                    <Label Text="195" HorizontalOptions="End" FontAttributes="Bold" FontSize="14" x:Name="Hash_locktime"/>
+                </StackLayout>
+                <StackLayout Grid.Row="4" Orientation="Horizontal">
+                    <Label Text="Confirmation(s)" HorizontalOptions="Start" FontAttributes="Bold" FontSize="15"/>
+                    <Label Text="3229" HorizontalOptions="End" FontAttributes="Bold" FontSize="14" x:Name="H_confirmation"/>
+                </StackLayout>
+                <StackLayout Grid.Row="5" Orientation="Vertical" Margin="0,10,0,0">
+                    <Label Text="Date and Time of Transaction" HorizontalOptions="Start" FontAttributes="Bold" FontSize="15"/>
+                    <Label Text="12/20/2022 5:12:44 AM" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="14" x:Name="Hash_date"/>
+                </StackLayout>
+                <StackLayout Grid.Row="6" Orientation="Vertical">
+                    <Label Text="Transaction ID:" HorizontalOptions="Start" FontAttributes="Bold" FontSize="15"/>
+                    <Label Text="3229LSWKJFI2985IKVJCSMDMSFJIWURU2IU42848FJDJSDFVS" FontAttributes="Bold" 
+                           HorizontalOptions="CenterAndExpand" FontSize="14" x:Name="Bhash"/>
+                </StackLayout>
+                <Button Margin="0,10,0,0" Text="View Transaction in Explorer"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" Grid.Row="7" Clicked="Button_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

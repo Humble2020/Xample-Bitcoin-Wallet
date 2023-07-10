@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Title="Recover Wallet"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:material="clr-namespace:Plugin.MaterialDesignControls;assembly=Plugin.MaterialDesignControls"
+             x:Class="XampleBitcoin.Views.RecoverWallet">
+    <StackLayout Margin="15,30,15,0" >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" >
+                <StackLayout Grid.Row="0" HorizontalOptions="FillAndExpand">
+                    <material:MaterialLabel Text="Provide the seed to your wallet." HorizontalOptions="Start"
+                                            VerticalOptions="Center" FontAttributes="Bold" Margin="0,0,0,0"/>
+                    <material:MaterialLabel Text="Note, if you input an incorrect seed a different wallet will be created for you and might lose your bitcoins." HorizontalOptions="Start"
+                                            VerticalOptions="Center" FontAttributes="Bold" Margin="0,0,0,0"/>
+                    <material:MaterialLabel Text="Please, provide a password for extra security to your funds." HorizontalOptions="Start"
+                                            VerticalOptions="Center" FontAttributes="Bold" Margin="0,0,0,0"/>
+                    <material:MaterialEditor HorizontalOptions="FillAndExpand" CornerRadius="2"
+    Type="Filled"
+    Placeholder="Your seed here..."
+    MaxLength="62"
+    AnimateError="True"
+    TabIndex="1"
+    AutoSize="TextChanges"
+    HeightRequest="120"
+    LabelTextColor="Black"
+    TextColor="Black"
+    PlaceholderColor="Gray"
+    BackgroundColor="Transparent"
+    BorderColor="Black" />
+                    <material:MaterialEntry HorizontalOptions="FillAndExpand" 
+    Type="Filled"
+    Placeholder="enter wallet password"
+    MaxLength="62"
+    Text="{Binding MEEnterPassword4Wallet}"
+    AnimateError="True"
+    TabIndex="1"
+    ReturnType="Default"
+    LabelTextColor="Black"
+    TextColor="Black"
+    PlaceholderColor="Gray"
+    BackgroundColor="Transparent"
+    BorderColor="Black" />
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="10">
+                <material:MaterialButton Text="Recover My Wallet" BackgroundColor="DarkGreen" HorizontalOptions="End" TextColor="White"
+                                             Command="{Binding recovercommand}"/>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

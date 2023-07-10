@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Title="Receive Ethereum"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:material="clr-namespace:Plugin.MaterialDesignControls;assembly=Plugin.MaterialDesignControls"
+             x:Class="XampleBitcoin.Views.ReceiveEthereum">
+    <ContentPage.Content>
+        <StackLayout Margin="10,60,10,0" HorizontalOptions="CenterAndExpand">
+            <Grid>
+                <StackLayout Grid.Row="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition Height="0.4*"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <StackLayout Grid.Row="0">
+                                    <material:MaterialLabel Text="bc1qqjd0k5OOCmqtw3tpx6njnkrqzqPA302XXMEW34YTH" TextTransform="Uppercase" TextDecorations="None" HorizontalOptions="Start"
+                                            VerticalOptions="Center" TextColor="Blue" FontAttributes="Bold" Margin="10,0,0,0"/>
+                                </StackLayout>
+                                <StackLayout Grid.Row="1">
+                                    <material:MaterialLabel Text="P2KPH/P2P" TextTransform="Uppercase" TextDecorations="None" HorizontalOptions="Start"
+                                            VerticalOptions="Center" TextColor="DarkGray" FontAttributes="Bold" Margin="10,0,0,0"/>
+                                </StackLayout>
+                                <StackLayout Grid.Row="2" Margin="0,5,0,0">
+                                    <material:MaterialButton Text="Copy Address" BackgroundColor="DarkGreen" HorizontalOptions="Start" TextColor="White"/>
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <Frame HasShadow="True" HeightRequest="110" HorizontalOptions="End" WidthRequest="150" BackgroundColor="Green">
+
+                            </Frame>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
